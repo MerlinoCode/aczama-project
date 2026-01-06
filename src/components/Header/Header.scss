@@ -1,0 +1,77 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #111;
+  color: #fff;
+  position: sticky;
+  top: 0;
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+
+      &:hover {
+        color: #0af;
+      }
+    }
+
+    // Mobile oculto
+    @media (max-width: 768px) {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background: #111;
+      flex-direction: column;
+      width: 200px;
+      padding: 1rem;
+      transform: translateX(100%);
+      transition: 0.3s ease;
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    span {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      transition: 0.3s ease;
+    }
+
+    &.open span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    &.open span:nth-child(2) {
+      opacity: 0;
+    }
+    &.open span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+}
