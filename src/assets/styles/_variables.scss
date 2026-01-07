@@ -4,16 +4,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-$text: #e3fde3;
-$background: rgba(134, 192, 140, 0.19);
-$dark-background: rgba(14, 32, 21, 0.675);
-$primary: #79e8a7;
-$secondary: #7c96ce;
-$tertiary: #f2707e;
-$accent: #d4b926;
-$bodyBackground: rgb(27, 27, 27);
+//Colors
+$color-text: #e3fde3;
+$color-bg: #111;
+$color-background: rgba(14, 32, 21, 0.675);
+$color-primary: #0af;
+$color-secondary: #7c96ce;
+$color-tertiary: #f2707e;
+$color-accent: #d4b926;
+$color-body-bg: rgb(27, 27, 27);
+//Fonts
 $primary-font: 'Cinzel', sans-serif;
 $secondary-font: 'Cinzel Decorative', sans-serif;
 $tertiary-font: 'Playfair Display', sans-serif;
 $quaternary-font: 'Oxygen', sans-serif;
-$pixel-font: 'VT323',sans-serif;
+//Sizes
+$base-font-size: 16px;
+$header-height: 70px;
+// Breakpoints
+$mobile-landscape: 568px;
+$tablet: 768px;
+$desktop: 992px;
