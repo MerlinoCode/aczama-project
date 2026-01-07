@@ -1,12 +1,35 @@
-@mixin font($f-size, $ls-size, $f-weight, $f-family, $f-color)
-{
-    color: $f-color;
-    font-size: $f-size;
-    font-family: $f-family;
-    font-style: normal;
-    font-weight: $f-weight;
-    letter-spacing: $ls-size;
-    line-height: normal;
-}  
- 
+@use "variables" as v;
 
+@mixin font($f-size, $ls-size, $f-weight, $f-family, $f-color){
+    color                       : $f-color;
+    font-size                   : $f-size;
+    font-family                 : $f-family;
+    font-style                  : normal;
+    font-weight                 : $f-weight;
+    letter-spacing              : $ls-size;
+    line-height                 : normal;}  
+
+@mixin grid($nrow, $ncol, $gap){
+    display                     : grid;
+    grid-template-rows          : repeat($nrow, 1fr);
+    grid-template-columns       : repeat($ncol, 1fr);
+    gap                         : $gap;
+}
+
+@mixin screen-type($screenType){
+    @if $screenType == 'mini-mobile' {
+        @media only screen and (min-width: 0px) and (max-width: v.$mini-mobile) { @content; }
+    }
+    @else if $screenType == 'mobile' {
+        @media (min-width: v.$mini-mobile) and (max-width: v.$mobile) { @content; }
+    }
+    @else if $screenType == 'tablet' {
+        @media (min-width: v.$mobile) and (max-width: v.$tablet) { @content; }
+    }
+    @else if $screenType == 'laptop' {
+        @media (min-width: v.$tablet) and (max-width: v.$laptop) { @content; }
+    }
+    @else if $screenType == 'desktop' {
+        @media (min-width: v.$laptop) { @content; }
+    }
+}   

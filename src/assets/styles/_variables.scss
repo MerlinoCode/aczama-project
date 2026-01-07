@@ -5,23 +5,24 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 //Colors
-$color-text: #e3fde3;
-$color-bg: #111;
-$color-background: rgba(14, 32, 21, 0.675);
-$color-primary: #0af;
-$color-secondary: #7c96ce;
-$color-tertiary: #f2707e;
-$color-accent: #d4b926;
-$color-body-bg: rgb(27, 27, 27);
+$color-background       : #0e2015ac;
+$color-body-bg          : #1b1b1b;
+$color-text             : #e3fde3;
+$color-bg               : #111;
+$color-primary          : #0af;
+$color-secondary        : #7c96ce;
+$color-tertiary         : #f2707e;
+$color-accent           : #d4b926;
 //Fonts
-$primary-font: 'Cinzel', sans-serif;
-$secondary-font: 'Cinzel Decorative', sans-serif;
-$tertiary-font: 'Playfair Display', sans-serif;
-$quaternary-font: 'Oxygen', sans-serif;
+$primary-font           : 'Cinzel', sans-serif;
+$secondary-font         : 'Cinzel Decorative', sans-serif;
+$tertiary-font          : 'Playfair Display', sans-serif;
+$quaternary-font        : 'Oxygen', sans-serif;
 //Sizes
-$base-font-size: 16px;
-$header-height: 70px;
+$base-font-size         : 16px;
+$header-height          : 70px;
 // Breakpoints
-$mobile-landscape: 568px;
-$tablet: 768px;
-$desktop: 992px;
+$mini-mobile            : 320px;
+$mobile                 : 480px;
+$tablet                 : 720px;
+$laptop                 : 1080px;

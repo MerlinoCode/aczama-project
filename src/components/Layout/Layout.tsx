@@ -9,13 +9,13 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
     return (
-    <section id="layout">
-            <Header />
-                <main className="main-content">
-                    {children}
-                </main>
-            <Footer/>
-    </section>
+    <body id="layout">
+        <Header />
+            <main className="main-content">
+                {children}
+            </main>
+        <Footer/>
+    </body>
     );
 };
 
