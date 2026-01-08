@@ -1,3 +1,13 @@
-@use '../../assets/styles/variables';
-@use '../../assets/styles/mixins';
+@use "../../assets/styles/variables.scss" as v;
+@use "../../assets/styles/mixins.scss" as m;
 
+//import font from google
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
+
+$primary-color   : #FF512F;
+$secondary-color : #333;
+$form-bg         : #fff;
+
+.contact-title{
+    text-align: center;
+}

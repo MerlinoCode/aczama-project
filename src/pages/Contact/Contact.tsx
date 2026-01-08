@@ -1,8 +1,10 @@
+import ContactForm from '../../components/ContactForm/ContactForm';
 import './Contact.scss'
 export default function Contact() {
   return (
-    <div>
-      <h1>Contact</h1>
-    </div>
+    <section className="contact-wrap">
+      <h2 className="contact-title">Contacto</h2>
+      <ContactForm />
+    </section>
   );
 }

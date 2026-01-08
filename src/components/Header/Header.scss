@@ -15,6 +15,7 @@
     @include m.font(22px, 1.05px, 400, v.$primary-font, v.$color-secondary);
     text-decoration         : none;
     text-align              : center;
+    margin-bottom: 2em;
 }
 .menu-icon { 
   display                   : none; 
@@ -41,7 +42,7 @@
     @include m.font(16px, 1px, 400, v.$primary-font, v.$color-primary);
 }
 .nav-elements.active {
-        right               : 0;
+        right               : -30px;
         width               : 100vw;
         z-index             : 2;
     }
