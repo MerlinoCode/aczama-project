@@ -2,13 +2,10 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
   background: v.$color-bg;
   color: v.$color-text;
-  position: top;
-  top: 0;
-  height: v.$header-height;
-  z-index: 100;
+}
+.header-container{
+  margin: 0 auto;
+  padding: 1rem 2rem; 
 }
