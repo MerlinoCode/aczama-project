@@ -1,23 +1,33 @@
 import { useState } from 'react';
 import './Header.scss';
+import Menu from '../../assets/icons/Menu';
+import XCross from '../../assets/icons/XCross';
 
 const Header: React.FC = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [showNavbar, setShowNavbar] = useState(false);
+    const [changeIconMenu, setChangeIconMenu] = useState(true)
+
+    const handleShowNavbar = () => { setShowNavbar(!showNavbar) }
+    const handleChangeIconMenu = () => { setChangeIconMenu(!changeIconMenu) }
     return (
         <header className="header">
-            <div className="header-container">
-                <h1 className="logo"><a href="/">Teresa Aczama</a></h1>
-                <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
-                    <ul>
-                        <li><a href="/about">Acerca de</a></li>
-                        <li><a href="/about">Libros publicados</a></li>
-                        <li><a href="/contact">Contacto</a></li>
-                    </ul>
-                </nav>
-                <button className={`header__toggle ${isMenuOpen ? "open" : ""}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                    <span></span>
-                </button>
-            </div>
+            <nav className="navbar">
+                <div className="nav-container">
+                    <div className="menu-icon" onClick={() => { handleShowNavbar(); handleChangeIconMenu(); }}>
+                        {
+                            changeIconMenu ? <Menu w={90} h={90} /> : <XCross />
+                        }
+                    </div>
+                    <div className={`nav-elements  ${showNavbar && 'active'}`}>
+                        <ul>
+                            <li><a>Inicio</a></li>
+                            <li><a>Biografía</a></li>
+                            <li><a>El Libro</a></li>
+                            <li><a>Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </header>
     );
 };
