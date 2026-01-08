@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Header.scss';
 import Menu from '../../assets/icons/Menu';
 import XCross from '../../assets/icons/XCross';
+import { NavLink } from 'react-router-dom';
 
 const Header: React.FC = () => {
     const [showNavbar, setShowNavbar] = useState(false);
@@ -20,10 +21,10 @@ const Header: React.FC = () => {
                     </div>
                     <div className={`nav-elements  ${showNavbar && 'active'}`}>
                         <ul>
-                            <li><a>Inicio</a></li>
-                            <li><a>Biografía</a></li>
-                            <li><a>El Libro</a></li>
-                            <li><a>Contacto</a></li>
+                            <NavLink onClick={() => { handleShowNavbar(); handleChangeIconMenu();}} to="/" className={({ isActive }) => (isActive ? "active-link" : "") }>Inicio</NavLink>
+                            <NavLink onClick={() => { handleShowNavbar(); handleChangeIconMenu();}} to="/biography" className={({ isActive }) => (isActive ? "active-link" : "") }>Biografía</NavLink>
+                            <NavLink onClick={() => { handleShowNavbar(); handleChangeIconMenu();}} to="/book" className={({ isActive }) => (isActive ? "active-link" : "") }>El Libro</NavLink>
+                            <NavLink onClick={() => { handleShowNavbar(); handleChangeIconMenu();}} to="/contact" className={({ isActive }) => (isActive ? "active-link" : "") }>Contacto</NavLink>
                         </ul>
                     </div>
                 </div>

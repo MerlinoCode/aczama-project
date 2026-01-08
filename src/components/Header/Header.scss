@@ -1,12 +1,20 @@
 @use "../../assets/styles/variables.scss" as v;
 @use "../../assets/styles/mixins.scss" as m;
 
+.active-link{
+    border-bottom           : 2px solid v.$color-text;
+    color                   : v.$color-text!important;
+}
+
 .header {
-  display                   : flex;
   height                    : 60px;
   position                  : relative;
-  background                : v.$color-bg;
   color                     : v.$color-text;
+}
+.header .navbar .nav-elements ul a{
+    @include m.font(22px, 1.05px, 400, v.$primary-font, v.$color-secondary);
+    text-decoration         : none;
+    text-align              : center;
 }
 .menu-icon { 
   display                   : none; 
@@ -14,13 +22,12 @@
 .nav-container {
     max-width               : 1100px;
     margin                  : 0 auto;
-    padding                 : 0 15px;
     display                 : flex;
     justify-content         : space-between;
     align-items             : center;
     height                  : 100%;
 }
-.nav-elements { z-index: 3;}
+.nav-elements { z-index     : 3;}
 .nav-elements ul {
     display                 : flex;
     justify-content         : space-between;
@@ -31,11 +38,13 @@
     text-align              : center;
 }
 .nav-elements ul a {
-    font-size               : 16px;
-    font-weight             : 400;
-    text-decoration         : none;
-    color                   : v.$color-primary;
+    @include m.font(16px, 1px, 400, v.$primary-font, v.$color-primary);
 }
+.nav-elements.active {
+        right               : 0;
+        width               : 100vw;
+        z-index             : 2;
+    }
 .nav-elements ul a.active {
     color                   : #574c4c;
     font-weight             : 500;
@@ -59,17 +68,14 @@
     text-shadow             : 0px 0px 40px v.$color-primary;
 } 
 .navbar {
-    display: flex;
-    height: 60px;
-    position: relative;
+    display                 : flex;
+    height                  : 60px;
+    position                : relative;
 }
 
 @include m.screen-type(mini-mobile){
-    @include m.menu-icon-style();
-}
+    @include m.menu-icon-mobile-styles();
+    @include m.menu-nav-elements-mobile-styles();}
 @include m.screen-type(mobile){
-    @include m.menu-icon-style();
-}
-@include m.screen-type(tablet){
-    @include m.menu-icon-style();
-}
+    @include m.menu-icon-mobile-styles();
+    @include m.menu-nav-elements-mobile-styles();}

@@ -13,8 +13,7 @@
     display                         : grid;
     grid-template-rows              : repeat($nrow, 1fr);
     grid-template-columns           : repeat($ncol, 1fr);
-    gap                             : $gap;
-}
+    gap                             : $gap;}
 
 @mixin screen-type($screenType){
     @if $screenType == 'mini-mobile' 
@@ -42,13 +41,39 @@
     @else if $screenType == 'desktop' {
         @media (min-width           : v.$laptop)        
         { @content; }
-    }
-}   
+    }}   
 
-@mixin menu-icon-style(){
+@mixin menu-icon-mobile-styles(){
     .menu-icon{
         display                     : block;
         cursor                      : pointer;
-        margin                      : auto;
+    }}
+    
+@mixin menu-nav-elements-mobile-styles(){
+    .nav-elements {
+        position                    : absolute;
+        right                       : 0;
+        top                         : 5.5rem;
+        background-color            : v.$color-background;
+        width                       : 0px;
+        height                      : calc(100vh - 60px);
+        transition                  : all 0.3s ease-in;
+        overflow                    : hidden;
     }
-}
+    
+    .nav-elements.active {
+        width                       : 100%;
+        z-index                     : 2;
+    }
+    .nav-elements ul a { font-size  : 20px; }
+    .nav-elements ul {
+        display                     : flex;
+        flex-direction              : column;
+        padding                     : 0;
+    }
+    
+    .nav-elements ul li {
+        margin-right                : unset;
+        margin-top                  : 3rem;
+        text-align                  : center;
+    }}
