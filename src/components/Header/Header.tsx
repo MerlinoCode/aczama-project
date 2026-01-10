@@ -24,6 +24,7 @@ const Header: React.FC = () => {
                             <NavLink onClick={() => { handleShowNavbar(); handleChangeIconMenu();}} to="/" className={({ isActive }) => (isActive ? "active-link" : "") }>Inicio</NavLink>
                             <NavLink onClick={() => { handleShowNavbar(); handleChangeIconMenu();}} to="/biography" className={({ isActive }) => (isActive ? "active-link" : "") }>Biografía</NavLink>
                             <NavLink onClick={() => { handleShowNavbar(); handleChangeIconMenu();}} to="/book" className={({ isActive }) => (isActive ? "active-link" : "") }>El Libro</NavLink>
+                            <NavLink onClick={() => { handleShowNavbar(); handleChangeIconMenu();}} to="/course" className={({ isActive }) => (isActive ? "active-link" : "") }>Curso</NavLink>
                             <NavLink onClick={() => { handleShowNavbar(); handleChangeIconMenu();}} to="/contact" className={({ isActive }) => (isActive ? "active-link" : "") }>Contacto</NavLink>
                         </ul>
                     </div>

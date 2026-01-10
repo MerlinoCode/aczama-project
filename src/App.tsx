@@ -4,6 +4,7 @@ import Layout from './components/Layout/Layout';
 import Biography from './pages/Biography/Biography';
 import Book from './pages/Book/Book';
 import Contact from './pages/Contact/Contact';
+import Course from './pages/Course/Course';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
             <Route path='/'             element={<Home/>}/>
             <Route path='/biography'    element={<Biography/>}/>
             <Route path='/book'         element={<Book/>}/>
+            <Route path='/course'       element={<Course/>}/>
             <Route path='/contact'      element={<Contact/>}/>
           </Routes>
       </Layout>
